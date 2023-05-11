@@ -1,0 +1,30 @@
+[syb0799] Thu May 11 13:47:08 2023 +0900 classdiagram심영보 536032b
+[rnjsdhtjs] Thu May 11 01:39:15 2023 +0900 취합 e016222
+[kiwisejunior] Thu May 11 00:20:24 2023 +0900 김재윤 ver.3 8d532a1
+[yongun2] Thu May 11 00:16:18 2023 +0900 보고서 5c97b8f
+[kiwisejunior] Thu May 11 00:14:34 2023 +0900 김재윤 수정 978dcf5
+[yongun2] Thu May 11 00:05:02 2023 +0900 final modify 용운 b6a7069
+[rnjsdhtjs] Thu May 11 00:02:57 2023 +0900 class-diagram-GOS.drawio ver.3 10728ae
+[rnjsdhtjs] Thu May 11 00:00:05 2023 +0900 class-diagram-GOS ver.3 1630cdc
+[yongun2] Wed May 10 22:41:35 2023 +0900 class diagram, communication diagram modified 용운 d41437a
+[yongun2] Wed May 10 22:11:43 2023 +0900 class diagram, communication diagram 용운 ec2e020
+[rnjsdhtjs] Wed May 10 22:00:31 2023 +0900 class-diagram-GOS ver.2 b52edcf
+[kiwisejunior] Wed May 10 18:31:20 2023 +0900 김재윤 수정 acf72ec
+[yongun2] Wed May 10 10:43:13 2023 +0900 Modified requirement-list, use-case-diagram 용운 5dbc613
+[rnjsdhtjs] Wed May 10 02:28:59 2023 +0900 class-diagram-GOS 14d7835
+[rnjsdhtjs] Wed May 10 02:27:42 2023 +0900 권오선 communication diagram ver.2 a68b6e9
+[rnjsdhtjs] Wed May 10 01:03:44 2023 +0900 권오선 communication diagram f4d3ae9
+[kiwisejunior] Wed May 10 00:05:54 2023 +0900 class-diagram-JYK c9c8b1f
+[rnjsdhtjs] Tue May 9 22:04:12 2023 +0900 Merge branch 'recruit-information-system-modified' of https://github.com/yongun2/2023-hongik-software-engineering into recruit-information-system-modified # Please enter a commit message to explain why this merge is necessary, e3a0b04
+[rnjsdhtjs] Tue May 9 22:03:48 2023 +0900 권오선 use case descriptions 6de324e
+[rnjsdhtjs] Tue May 9 21:49:32 2023 +0900 6fbdd11de90a8b6dda8c3346660206996cbc222d Revert "권오선 communication diagram" 8a56cbf
+[rnjsdhtjs] Tue May 9 21:37:03 2023 +0900 권오선 communication diagram 6fbdd11
+[rnjsdhtjs] Tue May 9 21:20:51 2023 +0900 권오선 requirement list e4f00c0
+[kiwisejunior] Mon May 8 22:07:14 2023 +0900 김재윤 commuication diagram 수정 04e2c2a
+[kiwisejunior] Mon May 8 21:51:08 2023 +0900 김재윤 communication diagram 수정 1b81b2d
+[kiwisejunior] Sun May 7 23:29:34 2023 +0900 김재윤 communication diagram 7888549
+[kiwisejunior] Sun May 7 23:25:37 2023 +0900 김재윤 use case descriptions 181f579
+[kiwisejunior] Sat May 6 23:50:56 2023 +0900 김재윤 requirement list 19a1d7f
+[rnjsdhtjs] Sat May 6 23:33:15 2023 +0900 test 7a48376
+[yongun2] Sat May 6 20:43:04 2023 +0900 use case diagram 568a10c
+[yongun2] Sat May 6 20:32:46 2023 +0900 README.md dd6a9e0
