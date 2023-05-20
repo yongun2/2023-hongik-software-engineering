@@ -1,2 +1,5 @@
 .DS_Store
 *.bkp
+CMakeLists.txt
+.idea
+cmake-build-debug
