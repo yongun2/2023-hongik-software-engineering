@@ -1,6 +1,6 @@
-<mxfile host="Electron" modified="2023-05-11T16:31:03.214Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="k61vEs_SLjLJBHTGfxc3" version="21.2.8" type="device">
+<mxfile host="Electron" modified="2023-05-21T08:13:42.009Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/21.2.8 Chrome/112.0.5615.165 Electron/24.2.0 Safari/537.36" etag="LtnNkveiWbWw85Jo_V-S" version="21.2.8" type="device">
   <diagram name="페이지-1" id="Jw_VSQ_Z35y2hl4-dUQj">
-    <mxGraphModel dx="-1205" dy="1783" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="-823" dy="1997" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -61,8 +61,8 @@
             <mxPoint x="3740" y="77.5" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="iuDToype7Zn0Ibz6AuYB-15" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;3: *[For all MyApply] getMyApply()&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
-          <mxGeometry x="3507" y="240" width="300" height="40" as="geometry" />
+        <mxCell id="iuDToype7Zn0Ibz6AuYB-15" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;3: *[ myapplyStatistics==applywork] getMyApply()&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
+          <mxGeometry x="3410" y="240" width="420" height="40" as="geometry" />
         </mxCell>
         <mxCell id="iuDToype7Zn0Ibz6AuYB-16" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;1: startInterface()&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="1" vertex="1">
           <mxGeometry x="3522" y="120" width="160" height="40" as="geometry" />
