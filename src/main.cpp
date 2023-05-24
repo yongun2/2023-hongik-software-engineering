@@ -47,9 +47,9 @@ void doTask() {
     Withdraw *withdraw_control = new Withdraw(member_collection);
     // boundary
     RegisterUI *register_ui = new RegisterUI(in_fp, out_fp, register_control);
-    LoginUI *login_ui = new LoginUI(in_fp, out_fp, login_control);
-    LogoutUI *logout_ui = new LogoutUI(in_fp, out_fp, logout_control);
-    WithdrawalUI *withdraw_ui = new WithdrawalUI(in_fp, out_fp, withdraw_control);
+    LoginUI *login_ui = new LoginUI(in_fp,out_fp, login_control);
+    LogoutUI *logout_ui = new LogoutUI(out_fp, logout_control);
+    WithdrawalUI *withdraw_ui = new WithdrawalUI(out_fp, withdraw_control);
 
 
     // 메뉴 파싱을 위한 level 구분을 위한 변수

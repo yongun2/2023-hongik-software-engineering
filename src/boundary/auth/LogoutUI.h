@@ -19,7 +19,7 @@ private:
     FILE *output_file_pointer;
     Logout *logout_control;
 public:
-    LogoutUI(FILE *inputFilePointer, FILE *outputFilePointer, Logout *logoutControl);
+    LogoutUI(FILE *outputFilePointer, Logout *logoutControl);
 
     void select_logout();
 };

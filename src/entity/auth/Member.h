@@ -38,7 +38,9 @@ public:
 
     void set_is_login(bool login_status);
 
-    virtual string get_detail() const{};
+    virtual string get_detail() const{
+        return "";
+    };
 
 };
 

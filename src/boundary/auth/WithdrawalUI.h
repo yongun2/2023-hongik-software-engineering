@@ -18,7 +18,8 @@ private:
     FILE *output_file_pointer;
     Withdraw *withdraw_control;
 public:
-    WithdrawalUI(FILE *inputFilePointer, FILE *outputFilePointer, Withdraw *withdrawControl);
+    WithdrawalUI(FILE *outputFilePointer, Withdraw *withdrawControl);
+
     void select_withdraw();
 };
 

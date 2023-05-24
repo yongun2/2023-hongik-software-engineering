@@ -4,9 +4,7 @@
 
 #include "WithdrawalUI.h"
 
-WithdrawalUI::WithdrawalUI(FILE *inputFilePointer, FILE *outputFilePointer, Withdraw *withdrawControl)
-        : input_file_pointer(inputFilePointer), output_file_pointer(outputFilePointer),
-          withdraw_control(withdrawControl) {}
+
 
 void WithdrawalUI::select_withdraw() {
 
@@ -17,4 +15,7 @@ void WithdrawalUI::select_withdraw() {
     /** 회원탈퇴 아이디 출력 **/
     fprintf(output_file_pointer, "> %s\n", id.c_str());
 }
+
+WithdrawalUI::WithdrawalUI(FILE *outputFilePointer, Withdraw *withdrawControl) : output_file_pointer(outputFilePointer),
+                                                                                 withdraw_control(withdrawControl) {}
 

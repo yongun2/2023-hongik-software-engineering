@@ -22,6 +22,7 @@ private:
     FILE *output_file_pointer;
     Login *login_control;
 public:
+
     LoginUI(FILE *inputFilePointer, FILE *outputFilePointer, Login *loginControl);
 
     void select_login();
