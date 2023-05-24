@@ -9,11 +9,13 @@
 #include <cstdio>
 #include "../../controll/auth/Logout.h"
 
-#define MAX_STRING 32
-
+/**
+ * @var output_file_pointer : output.txt에 출력하기 위한 파일 포인터
+ * @var logout_control : 로그아웃 로직을 수행하는 컨트롤
+ * LogoutUI 객체 생성시에 주입을 받아야 합니다.
+ */
 class LogoutUI {
 private:
-    FILE *input_file_pointer;
     FILE *output_file_pointer;
     Logout *logout_control;
 public:

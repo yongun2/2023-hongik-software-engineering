@@ -17,9 +17,9 @@ void LoginUI::select_login() {
     /** 로그인 **/
     fscanf(input_file_pointer, "%s %s", id, password);
     /** 컨트롤 호출 **/
-//    login_control->login();
+    string login_member = login_control->login(id, password);
     /** 아이디 비밀번호 출력 **/
-    fprintf(output_file_pointer, "> %s %s\n", id, password);
+    fprintf(output_file_pointer, "> %s\n", login_member.c_str());
 
 
 }

@@ -10,14 +10,11 @@ WithdrawalUI::WithdrawalUI(FILE *inputFilePointer, FILE *outputFilePointer, With
 
 void WithdrawalUI::select_withdraw() {
 
-    const char *id = nullptr;
-
     /** 현재 상태 출력 **/
     fprintf(output_file_pointer, "1.2. 회원탈퇴\n");
-
     /** 컨트롤 호출 **/
-//    id = withdraw_control->withdraw();
+    string id = withdraw_control->withdraw();
     /** 회원탈퇴 아이디 출력 **/
-    fprintf(output_file_pointer, "> %s\n", id);
+    fprintf(output_file_pointer, "> %s\n", id.c_str());
 }
 
