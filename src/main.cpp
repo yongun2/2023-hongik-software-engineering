@@ -6,16 +6,22 @@
 #include "controll/auth/Login.h"
 #include "boundary/auth/LoginUI.h"
 #include "controll/auth/Logout.h"
-#include "boundary/auth/LogoutUI.h"
+#include "boundary/auth/LogoutUI.h""
+#include "boundary/auth/EmploymentInquiryAndApplyUI.h"
+#include "boundary/auth/EmploymentinfoUI.h"
+#include "boundary/auth/EmploymentWriteUI.h"
+#include "controll/auth/EmploymentInquiryAndApply.h"
+#include "controll/auth/EmploymentWrite.h"
+#include "controll/auth/Employmentinfo.h"
 
 
 using std::vector;
-// í•¨ìˆ˜ ì„ ì–¸
+// ÇÔ¼ö ¼±¾ğ
 void doTask();
 
-/** ë³¸ì¸ì˜ ê²½ë¡œë¡œ ìˆ˜ì • í•˜ë©´ ë©ë‹ˆë‹¤.**/
-#define INPUT_FILE_NAME "/Users/gyeyong-un/develop/2023-1/software/2023-hongik-software-engineering/src/input.txt"
-#define OUTPUT_FILE_NAME "/Users/gyeyong-un/develop/2023-1/software/2023-hongik-software-engineering/src/output.txt"
+/** º»ÀÎÀÇ °æ·Î·Î ¼öÁ¤ ÇÏ¸é µË´Ï´Ù.**/
+#define INPUT_FILE_NAME "/Users/ko/Desktop/src/input.txt"
+#define OUTPUT_FILE_NAME "/Users/ko/Desktop/src/output.txt"
 
 
 int main() {
@@ -29,13 +35,13 @@ int main() {
 void doTask() {
 
     /**
-     * íŒŒì¼ ì…ì¶œë ¥ ë³€ìˆ˜
+     * ÆÄÀÏ ÀÔÃâ·Â º¯¼ö
      */
     FILE *in_fp = fopen(INPUT_FILE_NAME, "r");
     FILE *out_fp = fopen(OUTPUT_FILE_NAME, "w");
 
     /**
-     * ë¡œê·¸ì¸ / íšŒì›ê°€ì… / ë¡œê·¸ì•„ì›ƒ / íƒˆí‡´
+     * ·Î±×ÀÎ / È¸¿ø°¡ÀÔ / ·Î±×¾Æ¿ô / Å»Åğ
      */
     //entity
 
@@ -52,25 +58,35 @@ void doTask() {
     WithdrawalUI *withdraw_ui = new WithdrawalUI(out_fp, withdraw_control);
 
 
-    // ë©”ë‰´ íŒŒì‹±ì„ ìœ„í•œ level êµ¬ë¶„ì„ ìœ„í•œ ë³€ìˆ˜
+    EmploymentCollection* Employment_collection = new EmploymentCollection();
+    // control
+    Employmentinfo* EmploymentInfo = new  Employmentinfo(Employment_collection);
+    EmploymentWrite* Employmentwrite = new  EmploymentWrite(Employment_collection);
+    EmploymentInquiryAndApply* EmploymentInquiryAndapply = new  EmploymentInquiryAndApply(Employment_collection);
+    // boundary
+    EmploymentWriteUI* EmploymentWrite_ui = new EmploymentWriteUI(member_collection,in_fp, out_fp, Employmentwrite);
+    EmploymentinfoUI* Employmentinfo_ui = new EmploymentinfoUI(out_fp, EmploymentInfo);
+    EmploymentInquiryAndApplyUI* EmploymentInquiryAndApply_ui = new EmploymentInquiryAndApplyUI(in_fp, out_fp, EmploymentInquiryAndapply);
+
+    // ¸Ş´º ÆÄ½ÌÀ» À§ÇÑ level ±¸ºĞÀ» À§ÇÑ º¯¼ö
     int menu_level_1 = 0, menu_level_2 = 0;
     int is_program_exit = 0;
 
     while (!is_program_exit) {
-        // ì…ë ¥íŒŒì¼ì—ì„œ ë©”ë‰´ ìˆ«ì 2ê°œë¥¼ ì½ê¸°
+        // ÀÔ·ÂÆÄÀÏ¿¡¼­ ¸Ş´º ¼ıÀÚ 2°³¸¦ ÀĞ±â
         fscanf(in_fp, "%d %d ", &menu_level_1, &menu_level_2);
 
-        // ë©”ë‰´ êµ¬ë¶„ ë° í•´ë‹¹ ì—°ì‚° ìˆ˜í–‰
+        // ¸Ş´º ±¸ºĞ ¹× ÇØ´ç ¿¬»ê ¼öÇà
         switch (menu_level_1) {
             case 1: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 1.1 íšŒì› ê°€ì… **/
+                        /** 1.1 È¸¿ø °¡ÀÔ **/
                         register_ui->select_register();
                         break;
                     }
                     case 2: {
-                        /** 1.2 íšŒì› íƒˆí‡´ **/
+                        /** 1.2 È¸¿ø Å»Åğ **/
                         withdraw_ui->select_withdraw();
                         break;
                     }
@@ -80,12 +96,12 @@ void doTask() {
             case 2: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 2.1 ë¡œê·¸ì¸ **/
+                        /** 2.1 ·Î±×ÀÎ **/
                         login_ui->select_login();
                         break;
                     }
                     case 2: {
-                        /** 2.2 ë¡œê·¸ì•„ì›ƒ **/
+                        /** 2.2 ·Î±×¾Æ¿ô **/
                         logout_ui->select_logout();
                         break;
                     }
@@ -95,11 +111,13 @@ void doTask() {
             case 3: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 3.1 ì±„ìš© ì •ë³´ ë“±ë¡ **/
+                        /** 3.1 Ã¤¿ë Á¤º¸ µî·Ï **/
+                        EmploymentWrite_ui->select_register();
                         break;
                     }
                     case 2: {
-                        /** 3.2 ë“±ë¡ëœ ì±„ìš© ì •ë³´ ì¡°íšŒ **/
+                        /** 3.2 µî·ÏµÈ Ã¤¿ë Á¤º¸ Á¶È¸ **/
+                        Employmentinfo_ui->Employment_View();
                         break;
                     }
                 }
@@ -108,19 +126,20 @@ void doTask() {
             case 4: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 4.1 ì±„ìš© ì •ë³´ ê²€ìƒ‰ **/
+                        /** 4.1 Ã¤¿ë Á¤º¸ °Ë»ö **/
+                        EmploymentInquiryAndApply_ui->Employment_View();
                         break;
                     }
                     case 2: {
-                        /** 4.2 ì±„ìš© ì§€ì› **/
+                        /** 4.2 Ã¤¿ë Áö¿ø **/
                         break;
                     }
                     case 3: {
-                        /** 4.3 ì§€ì› ì •ë³´ ì¡°íšŒ **/
+                        /** 4.3 Áö¿ø Á¤º¸ Á¶È¸ **/
                         break;
                     }
                     case 4: {
-                        /** 4.4 ì§€ì› ì·¨ì†Œ **/
+                        /** 4.4 Áö¿ø Ãë¼Ò **/
                         break;
                     }
                 }
@@ -129,7 +148,7 @@ void doTask() {
             case 5: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 5.1 ì§€ì› ì •ë³´ í†µê³„ **/
+                        /** 5.1 Áö¿ø Á¤º¸ Åë°è **/
                         break;
                     }
                 }
@@ -138,22 +157,22 @@ void doTask() {
             case 6: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 6.1 ì¢…ë£Œ **/
-                        // í…ìŠ¤íŠ¸ íŒŒì¼ ì¶œë ¥ ë¬¸êµ¬
-                        fprintf(out_fp, "6.1. ì¢…ë£Œ\n");
+                        /** 6.1 Á¾·á **/
+                        // ÅØ½ºÆ® ÆÄÀÏ Ãâ·Â ¹®±¸
+                        fprintf(out_fp, "6.1. Á¾·á\n");
 
-                        // ë™ì  í• ë‹¹ ì •ë¦¬
+                        // µ¿Àû ÇÒ´ç Á¤¸®
                         delete register_ui;
                         delete register_control;
                         delete withdraw_ui;
                         delete withdraw_control;
                         delete member_collection;
 
-                        // íŒŒì¼ í¬ì¸í„° ë‹«ê¸°
+                        // ÆÄÀÏ Æ÷ÀÎÅÍ ´İ±â
                         fclose(in_fp);
                         fclose(out_fp);
 
-                        // ì¢…ë£Œ í”Œë˜ê·¸ í™œì„±í™”
+                        // Á¾·á ÇÃ·¡±× È°¼ºÈ­
                         is_program_exit = 1;
                         break;
                     }

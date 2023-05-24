@@ -1,5 +1,5 @@
 //
-// Created by ê³„ìš©ìš´ on 2023/05/21.
+// Created by °è¿ë¿î on 2023/05/21.
 //
 
 #include "LoginUI.h"
@@ -12,14 +12,13 @@ void LoginUI::select_login() {
 
     char id[MAX_STRING], password[MAX_STRING];
 
-    /** í˜„ìž¬ ìƒíƒœ ì¶œë ¥ **/
-    fprintf(output_file_pointer, "2.1. ë¡œê·¸ì¸\n");
-    /** ë¡œê·¸ì¸ **/
+    /** ÇöÀç »óÅÂ Ãâ·Â **/
+    fprintf(output_file_pointer, "2.1. ·Î±×ÀÎ\n");
+    /** ·Î±×ÀÎ **/
     fscanf(input_file_pointer, "%s %s", id, password);
-    /** ì»¨íŠ¸ë¡¤ í˜¸ì¶œ **/
+    /** ÄÁÆ®·Ñ È£Ãâ **/
     string login_member = login_control->login(id, password);
-    /** ì•„ì´ë”” ë¹„ë°€ë²ˆí˜¸ ì¶œë ¥ **/
+    /** ¾ÆÀÌµð ºñ¹Ð¹øÈ£ Ãâ·Â **/
     fprintf(output_file_pointer, "> %s\n", login_member.c_str());
-
 
 }

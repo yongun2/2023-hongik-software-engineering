@@ -16,3 +16,4 @@ string CompanyMember::get_detail() const {
 }
 
 
+

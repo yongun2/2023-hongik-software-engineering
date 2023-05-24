@@ -1,0 +1,94 @@
+<mxfile host="app.diagrams.net" modified="2023-05-20T11:34:06.276Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/113.0.0.0 Safari/537.36" etag="o0rdmIPlSwQiYfe8yTxQ" version="21.3.2" type="device">
+  <diagram name="페이지-1" id="Jw_VSQ_Z35y2hl4-dUQj">
+    <mxGraphModel dx="2598" dy="2153" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-16" value="&lt;p style=&quot;border-color: var(--border-color); text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;background-color: initial; border-color: var(--border-color);&quot;&gt;User Interface::EmploymentWriteUI&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;br&gt;&lt;hr style=&quot;font-size: 18px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 18px;&quot;&gt;&lt;font style=&quot;font-size: 18px;&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&lt;font style=&quot;border-color: var(--border-color); text-align: center; font-size: 16px;&quot;&gt;startinterface()&lt;/font&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;background-color: initial; border-color: var(--border-color); text-align: center;&quot;&gt;createNew&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Employment()&lt;/span&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="44" y="-180" width="616" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-17" value="&lt;p style=&quot;border-color: var(--border-color); text-align: center; margin: 4px 0px 0px; font-size: 24px;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Control::&lt;/span&gt;&lt;/font&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;EmploymentWrite&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr style=&quot;font-size: 24px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;background-color: initial; border-color: var(--border-color); text-align: center;&quot;&gt;addNew&lt;/font&gt;&lt;font style=&quot;background-color: initial; border-color: var(--border-color); text-align: center;&quot;&gt;Employment()&lt;/font&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="820" y="-180" width="530" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-18" value="&lt;p style=&quot;border-color: var(--border-color); text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;span style=&quot;font-size: 24px;&quot;&gt;Company&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;-NameCompany: Sting&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;-&lt;/font&gt;BusinessNumber: Number&lt;/p&gt;&lt;p style=&quot;margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;-ownedEploymentCollection:EmploymentCollection&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;/p&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;+listEmplyoment()&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&amp;nbsp;+getMyCompany()&lt;br&gt;&lt;/font&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="50" y="315" width="370" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-20" value="&lt;p style=&quot;border-color: var(--border-color); text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;EmploymentCollection&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;-ownedEmployment: Employment&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;+addEmployment()&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;+getEmployment()&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="831.5" y="310" width="370" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-22" value="&lt;p style=&quot;border-color: var(--border-color); text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;background-color: initial; border-color: var(--border-color);&quot;&gt;User Interface::EmploymentInfo&lt;/span&gt;&lt;span style=&quot;background-color: initial; border-color: var(--border-color);&quot;&gt;UI&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;startInterface()&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;&amp;nbsp;MyEmployment()&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="45" y="90" width="475" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-23" value="&lt;p style=&quot;border-color: var(--border-color); text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Control::EmploymentInfo&lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;font size=&quot;3&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;showMyEmployment()&lt;/font&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" parent="1" vertex="1">
+          <mxGeometry x="820" y="90" width="370" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-29" value="&lt;span style=&quot;font-size: 18px;&quot;&gt;1&lt;/span&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="760" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-30" value="" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="320" y="315" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-31" value="" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="310" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-33" value="" style="shape=umlBoundary;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="610" y="-175" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-34" value="" style="shape=umlBoundary;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="480" y="90" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-36" value="" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="-180" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-37" value="" style="ellipse;shape=umlControl;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1140" y="90" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-43" value="" style="shape=mxgraph.arrows2.wedgeArrow;html=1;bendable=0;startWidth=13.333333333333336;fillColor=strokeColor;defaultFillColor=invert;defaultGradientColor=invert;rounded=0;" parent="1" edge="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="664.5" y="439.58000000000004" as="sourcePoint" />
+            <mxPoint x="687.5" y="439.58000000000004" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="ctPcMZ8cNtCoBixHX1E7-46" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="420" y="370" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-3" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="ctPcMZ8cNtCoBixHX1E7-18">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="600" y="570" as="sourcePoint" />
+            <mxPoint x="810" y="418" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-5" value="&lt;p style=&quot;border-color: var(--border-color); text-align: center; margin: 4px 0px 0px;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 24px;&quot;&gt;Employment&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;-work: String&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;-NumberPeople: Number&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;-targetDate: Date&lt;/p&gt;&lt;hr style=&quot;font-size: 16px;&quot; size=&quot;1&quot;&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;font style=&quot;font-size: 16px;&quot;&gt;+getEmploymentDetails()&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;border-color: var(--border-color); margin: 0px 0px 0px 4px; font-size: 16px;&quot;&gt;&lt;br&gt;&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;fontSize=12;fontFamily=Helvetica;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="831.5" y="670" width="370" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-6" value="" style="ellipse;shape=umlEntity;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="670" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="ctPcMZ8cNtCoBixHX1E7-20" target="xWCyNmK0q3RLDIk9Hglo-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="450" y="650" as="sourcePoint" />
+            <mxPoint x="840" y="650" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-10" value="" style="shape=mxgraph.arrows2.wedgeArrow;html=1;bendable=0;startWidth=20;fillColor=strokeColor;defaultFillColor=invert;defaultGradientColor=invert;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="100" height="100" relative="1" as="geometry">
+            <mxPoint x="930" y="590" as="sourcePoint" />
+            <mxPoint x="930" y="610" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-15" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;1&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="950" y="525" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-16" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;*&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="950" y="630" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-17" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;owns&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="850" y="580" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xWCyNmK0q3RLDIk9Hglo-18" value="&lt;font style=&quot;font-size: 19px;&quot;&gt;has&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="585" y="423" width="50" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,5 +1,5 @@
 //
-// Created by ê³„ìš©ìš´ on 2023/05/21.
+// Created by °è¿ë¿î on 2023/05/21.
 //
 
 #include "LogoutUI.h"
@@ -11,12 +11,12 @@ LogoutUI::LogoutUI(FILE *outputFilePointer, Logout *logoutControl) : output_file
 
 void LogoutUI::select_logout() {
 
-    /** í˜„ì¬ ìƒíƒœ ì¶œë ¥ **/
-    fprintf(output_file_pointer, "2.2. ë¡œê·¸ì•„ì›ƒ\n");
-    /** ì»¨íŠ¸ë¡¤ í˜¸ì¶œ **/
+    /** ÇöÀç »óÅÂ Ãâ·Â **/
+    fprintf(output_file_pointer, "2.2. ·Î±×¾Æ¿ô\n");
+    /** ÄÁÆ®·Ñ È£Ãâ **/
     string id = logout_control->logout();
-    /** ë¡œê·¸ì•„ì›ƒ ì•„ì´ë”” ì¶œë ¥ **/
-    fprintf(output_file_pointer, "> %s\n", id.c_str());
+    /** ·Î±×¾Æ¿ô ¾ÆÀÌµğ Ãâ·Â **/
+    fprintf(output_file_pointer, "> %s \n", id.c_str());
 }
 
 

@@ -1,5 +1,5 @@
 //
-// Created by ê³„ìš©ìš´ on 2023/05/20.
+// Created by °è¿ë¿î on 2023/05/20.
 //
 
 #include "RegisterUI.h"
@@ -18,13 +18,13 @@ void RegisterUI::select_register() {
 
     fscanf(input_file_pointer, "%d", &user_type);
 
-    fprintf(output_file_pointer, "1.1. íšŒì›ê°€ì…\n");
+    fprintf(output_file_pointer, "1.1. È¸¿ø°¡ÀÔ\n");
     switch (user_type) {
         case 1: {
-            /** íšŒì‚¬ íšŒì› íšŒì›ê°€ì… **/
+            /** È¸»ç È¸¿ø È¸¿ø°¡ÀÔ **/
             fscanf(input_file_pointer, "%s %s %s %s", company_name, ssn, id, password);
 
-            /** íšŒì‚¬ íšŒì› íšŒì›ê°€ì… ë¡œì§ í˜¸ì¶œ **/
+            /** È¸»ç È¸¿ø È¸¿ø°¡ÀÔ ·ÎÁ÷ È£Ãâ **/
             Member *new_member = new CompanyMember(id, password, COMPANY,company_name, ssn);
             new_member_detail = register_control->register_member(new_member);
 
@@ -32,19 +32,16 @@ void RegisterUI::select_register() {
             break;
         }
         case 2: {
-            /** ì¼ë°˜ íšŒì› íšŒì›ê°€ì… **/
+            /** ÀÏ¹İ È¸¿ø È¸¿ø°¡ÀÔ **/
             fscanf(input_file_pointer, "%s %s %s %s", name, registration_number, id, password);
 
-            /** ì¼ë°˜ íšŒì› íšŒì›ê°€ì… ë¡œì§ í˜¸ì¶œ **/
+            /** ÀÏ¹İ È¸¿ø È¸¿ø°¡ÀÔ ·ÎÁ÷ È£Ãâ **/
             Member *new_member = new GeneralMember(id, password, GENERAL, name, registration_number);
             new_member_detail = register_control->register_member(new_member);
             fprintf(output_file_pointer, "> 1 %s\n", new_member_detail.c_str());
             break;
         }
     }
-
-
-
 }
 
 
