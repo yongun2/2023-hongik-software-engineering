@@ -1,8 +1,12 @@
 
 #include <vector>
 #include "boundary/auth/RegisterUI.h"
-#include "entity/auth/GeneralMember.h"
-#include "entity/auth/CompanyMember.h"
+#include "controll/auth/Withdraw.h"
+#include "boundary/auth/WithdrawalUI.h"
+#include "controll/auth/Login.h"
+#include "boundary/auth/LoginUI.h"
+#include "controll/auth/Logout.h"
+#include "boundary/auth/LogoutUI.h"
 
 
 using std::vector;
@@ -34,12 +38,18 @@ void doTask() {
      * 로그인 / 회원가입 / 로그아웃 / 탈퇴
      */
     //entity
-    vector<GeneralMember> general_member_repository;
-    vector<CompanyMember> company_member_repository;
+
+    MemberCollection *member_collection = new MemberCollection();
     // control
-    Register *register_control = new Register(&company_member_repository, &general_member_repository);
+    Register *register_control = new Register(member_collection);
+    Login *login_control = new Login(member_collection);
+    Logout *logout_control = new Logout(member_collection);
+    Withdraw *withdraw_control = new Withdraw(member_collection);
     // boundary
     RegisterUI *register_ui = new RegisterUI(in_fp, out_fp, register_control);
+    LoginUI *login_ui = new LoginUI(in_fp, out_fp, login_control);
+    LogoutUI *logout_ui = new LogoutUI(in_fp, out_fp, logout_control);
+    WithdrawalUI *withdraw_ui = new WithdrawalUI(in_fp, out_fp, withdraw_control);
 
 
     // 메뉴 파싱을 위한 level 구분을 위한 변수
@@ -61,6 +71,7 @@ void doTask() {
                     }
                     case 2: {
                         /** 1.2 회원 탈퇴 **/
+                        withdraw_ui->select_withdraw();
                         break;
                     }
                 }
@@ -70,10 +81,12 @@ void doTask() {
                 switch (menu_level_2) {
                     case 1: {
                         /** 2.1 로그인 **/
+                        login_ui->select_login();
                         break;
                     }
                     case 2: {
                         /** 2.2 로그아웃 **/
+                        logout_ui->select_logout();
                         break;
                     }
                 }
@@ -132,6 +145,9 @@ void doTask() {
                         // 동적 할당 정리
                         delete register_ui;
                         delete register_control;
+                        delete withdraw_ui;
+                        delete withdraw_control;
+                        delete member_collection;
 
                         // 파일 포인터 닫기
                         fclose(in_fp);
