@@ -9,21 +9,21 @@
 #include "../../entity/auth/Member.h"
 #include "../../entity/auth/CompanyMember.h"
 #include "../../entity/auth/GeneralMember.h"
+#include "../../entity/auth/MemberCollection.h"
 
 using std::vector;
 
+/**
+ * @var member_collection : 회원들에 대한 정보를 저장하는 컬렉션
+ * Register 객체 생성시에 주입 필요
+ */
 class Register {
 private:
-    vector<CompanyMember> *company_member_repository;
-    vector<GeneralMember> *general_member_repository;
+    MemberCollection *member_collection;
 public:
+    explicit Register(MemberCollection *memberCollection);
 
-    Register(vector<CompanyMember> *companyMemberRepository, vector<GeneralMember> *generalMemberRepository);
-
-    void register_company_member(const char *id, const char *password, const char *company_name, const char *ssn);
-
-    void register_general_member(const char *id, const char *password, const char *name, const char *registration_number);
-
+    string register_member(Member *new_member);
 };
 
 

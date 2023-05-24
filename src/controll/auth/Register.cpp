@@ -5,23 +5,11 @@
 #include "Register.h"
 
 
-Register::Register(vector<CompanyMember> *companyMemberRepository, vector<GeneralMember> *generalMemberRepository)
-        : company_member_repository(companyMemberRepository), general_member_repository(generalMemberRepository) {
+Register::Register(MemberCollection *memberCollection) : member_collection(memberCollection) {}
 
-}
-
-void Register::register_company_member(const char *id, const char *password, const char *company_name,
-                                       const char *ssn) {
-
-    CompanyMember *member = new CompanyMember(id, password, company_name, ssn);
-    company_member_repository->push_back(*member);
-
-}
-
-void Register::register_general_member(const char *id, const char *password, const char *name,
-                                       const char *registration_number) {
-
-    GeneralMember *member = new GeneralMember(id, password, name, registration_number);
-    general_member_repository->push_back(*member);
+string Register::register_member(Member *new_member) {
+    /** 컬렉션에 새로운 회원 추가.**/
+    member_collection->add_member(new_member);
+    return new_member->get_detail() + " " + new_member->get_id() + " " + new_member->get_password();
 }
 
