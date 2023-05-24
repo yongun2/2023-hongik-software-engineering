@@ -5,19 +5,18 @@
 #ifndef INC_2023_HONGIK_SOFTWARE_ENGINEERING_COMPANYMEMBER_H
 #define INC_2023_HONGIK_SOFTWARE_ENGINEERING_COMPANYMEMBER_H
 
-
+#include<iostream>
 #include "Member.h"
 
-class CompanyMember : public Member{
+class CompanyMember:public Member{
 private:
-    char company_name[MAX_STRING];
-    char ssn[MAX_STRING];
+    string companyname;
+    string businessnum;
 public:
-    CompanyMember(const char *id, const char *password, const char *companyName, const char *ssn);
+    CompanyMember(const char *id, const char *password, GROUP group, const char *companyname, const char *businessnum);
 
-    const char *getCompanyName() const;
+    string get_detail() const override;
 
-    const char *getSsn() const;
 };
 
 

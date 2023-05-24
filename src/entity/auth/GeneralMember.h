@@ -5,19 +5,17 @@
 #ifndef INC_2023_HONGIK_SOFTWARE_ENGINEERING_GENERALMEMBER_H
 #define INC_2023_HONGIK_SOFTWARE_ENGINEERING_GENERALMEMBER_H
 
-
+#include<iostream>
 #include "Member.h"
 
 class GeneralMember : public Member{
 private:
-    char name[MAX_STRING];
-    char resident_number[MAX_STRING];
+    string name;
+    string resident_number;
 public:
-    GeneralMember(const char *id, const char *password, const char *name, const char *residentNumber);
+    GeneralMember(const char *id, const char *password, GROUP group, const char* name, const char* resident_number);
 
-    const char *getName() const;
-
-    const char *getResidentNumber() const;
+    string get_detail() const override;
 };
 
 

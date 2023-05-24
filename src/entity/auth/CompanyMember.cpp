@@ -4,16 +4,15 @@
 
 #include "CompanyMember.h"
 
-CompanyMember::CompanyMember(const char *id, const char *password, const char *companyName, const char *ssn) : Member(id, password){
-    strncpy(this->company_name, companyName, MAX_STRING);
-    strncpy(this->ssn, ssn, MAX_STRING);
+
+CompanyMember::CompanyMember(const char *id, const char *password, GROUP group, const char *companyname,
+                             const char *businessnum) : Member(id, password, COMPANY) {
+    this->companyname = companyname;
+    this->businessnum = businessnum;
 }
 
-const char *CompanyMember::getCompanyName() const {
-    return company_name;
+string CompanyMember::get_detail() const {
+    return this->companyname + " " + this->businessnum;
 }
 
-const char *CompanyMember::getSsn() const {
-    return ssn;
-}
 

@@ -4,15 +4,15 @@
 
 #include "GeneralMember.h"
 
-GeneralMember::GeneralMember(const char *id, const char *password, const char *name, const char *residentNumber) : Member(id, password) {
-    strncpy(this->name, name, MAX_STRING);
-    strncpy(this->resident_number, residentNumber, MAX_STRING);
+
+GeneralMember::GeneralMember(const char *id, const char *password, GROUP group, const char *name,
+                             const char *resident_number) : Member(id, password, GENERAL){
+    this->name = name;
+    this->resident_number = resident_number;
 }
 
-const char *GeneralMember::getName() const {
-    return name;
+
+string GeneralMember::get_detail() const {
+    return this->name + " " + this->resident_number;
 }
 
-const char *GeneralMember::getResidentNumber() const {
-    return resident_number;
-}
