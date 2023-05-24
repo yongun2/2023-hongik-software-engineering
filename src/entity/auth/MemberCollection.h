@@ -14,7 +14,7 @@ class MemberCollection {
 
 public:
 
-    Member *add_member(Member *new_member);
+    void add_member(Member *new_member);
 
     string delete_member(string id);
 

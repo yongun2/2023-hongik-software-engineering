@@ -5,7 +5,7 @@
 #include "MemberCollection.h"
 
 
-Member *MemberCollection::add_member(Member *new_member) {
+void MemberCollection::add_member(Member *new_member) {
     member_repository.push_back(new_member);
 }
 
