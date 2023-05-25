@@ -17,6 +17,6 @@ void EmploymentInquiryAndApplyUI::Employment_View() {
         strcpy(work, Viewcontrol->EmploymentNumberPeople().c_str());
         strcpy(NumberPeople, Viewcontrol->EmploymentDate().c_str());
         strcpy(COMPANYINFO, Viewcontrol->Companyinfo().c_str());
-        fprintf(output_file_pointer, "> %s%s %s %s\n", COMPANYINFO, Date, work, NumberPeople);
+        fprintf(output_file_pointer, "> %s %s %s %s\n", COMPANYINFO, Date, work, NumberPeople);
     }
 }
