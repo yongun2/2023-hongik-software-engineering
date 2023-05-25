@@ -9,8 +9,9 @@
 #include "../../entity/auth/MemberCollection.h"
 
 /**
- * @var member_collection : 회원들에 대한 정보를 저장하는 컬렉션
- * Logout 객체 생성시에 주입 필요
+ * WriterName: 계용운
+ * Description: 로그아웃 관련 비즈니스로직 실행 클래스, 생성시에 로그아웃 컨트롤 주입 받아야함
+ * WriteTime: 2023 05 26 02:00
  */
 class Logout {
 private:

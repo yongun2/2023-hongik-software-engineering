@@ -12,10 +12,10 @@
 #include "../../entity/auth/MemberCollection.h"
 
 using std::vector;
-
 /**
- * @var member_collection : 회원들에 대한 정보를 저장하는 컬렉션
- * Register 객체 생성시에 주입 필요
+ * WriterName: 계용운
+ * Description: 회원가입 관련 비즈니스 로직 실행 클래스, 생성시 멤버 컬렉션 주입 받아야함
+ * WriteTime: 2023 05 26 02:00
  */
 class Register {
 private:

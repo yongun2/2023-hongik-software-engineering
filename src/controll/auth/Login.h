@@ -9,8 +9,9 @@
 #include "../../entity/auth/MemberCollection.h"
 
 /**
- * @var member_collection : 회원들에 대한 정보를 저장하는 컬렉션
- * Login 객체 생성시에 주입 필요
+ * WriterName: 계용운
+ * Description: 로그인 컨트롤, 로그인 관련 비즈니스 로직 실행, 멤버 컬렉션을 생성시 주입 받아야 함
+ * WriteTime: 2023 05 26 02:00
  */
 class Login {
 private:

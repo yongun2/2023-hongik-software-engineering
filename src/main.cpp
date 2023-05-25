@@ -16,14 +16,19 @@
 
 
 using std::vector;
-// ÇÔ¼ö ¼±¾ð
+// ï¿½Ô¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 void doTask();
 
-/** º»ÀÎÀÇ °æ·Î·Î ¼öÁ¤ ÇÏ¸é µË´Ï´Ù.**/
+/** ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î·ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï¸ï¿½ ï¿½Ë´Ï´ï¿½.**/
 #define INPUT_FILE_NAME "/Users/ko/Desktop/src/input.txt"
 #define OUTPUT_FILE_NAME "/Users/ko/Desktop/src/output.txt"
 
-
+/**
+ * WriterName: ê³„ìš©ìš´
+ * Description: ë©”ì¸ í•¨ìˆ˜, ë¹„ì¦ˆë‹ˆìŠ¤ ë¡œì§ ì‹¤í–‰í•˜ëŠ” í•¨ìˆ˜ ì‹¤í–‰
+ * WriteTime: 2023 05 26 02:00
+ * @return: 0 ì •ìƒ ì¢…ë£Œ
+ */
 int main() {
 
     doTask();
@@ -31,17 +36,21 @@ int main() {
     return 0;
 
 }
-
+/**
+ * WriterName: ê³„ìš©ìš´
+ * Description: íŒŒì¼í¬ì¸í„° ì´ˆê¸°í™” ë° ë¹„ì¦ˆë‹ˆìŠ¤ ë¡œì§ ì‹¤í–‰
+ * WriteTime: 2023 05 26 02:00
+ */
 void doTask() {
 
     /**
-     * ÆÄÀÏ ÀÔÃâ·Â º¯¼ö
+     * ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
      */
     FILE *in_fp = fopen(INPUT_FILE_NAME, "r");
     FILE *out_fp = fopen(OUTPUT_FILE_NAME, "w");
 
     /**
-     * ·Î±×ÀÎ / È¸¿ø°¡ÀÔ / ·Î±×¾Æ¿ô / Å»Åð
+     * ï¿½Î±ï¿½ï¿½ï¿½ / È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ / ï¿½Î±×¾Æ¿ï¿½ / Å»ï¿½ï¿½
      */
     //entity
 
@@ -68,25 +77,25 @@ void doTask() {
     EmploymentinfoUI* Employmentinfo_ui = new EmploymentinfoUI(out_fp, EmploymentInfo);
     EmploymentInquiryAndApplyUI* EmploymentInquiryAndApply_ui = new EmploymentInquiryAndApplyUI(in_fp, out_fp, EmploymentInquiryAndapply);
 
-    // ¸Þ´º ÆÄ½ÌÀ» À§ÇÑ level ±¸ºÐÀ» À§ÇÑ º¯¼ö
+    // ï¿½Þ´ï¿½ ï¿½Ä½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ level ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     int menu_level_1 = 0, menu_level_2 = 0;
     int is_program_exit = 0;
 
     while (!is_program_exit) {
-        // ÀÔ·ÂÆÄÀÏ¿¡¼­ ¸Þ´º ¼ýÀÚ 2°³¸¦ ÀÐ±â
+        // ï¿½Ô·ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½ 2ï¿½ï¿½ï¿½ï¿½ ï¿½Ð±ï¿½
         fscanf(in_fp, "%d %d ", &menu_level_1, &menu_level_2);
 
-        // ¸Þ´º ±¸ºÐ ¹× ÇØ´ç ¿¬»ê ¼öÇà
+        // ï¿½Þ´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ø´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         switch (menu_level_1) {
             case 1: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 1.1 È¸¿ø °¡ÀÔ **/
+                        /** 1.1 È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ **/
                         register_ui->select_register();
                         break;
                     }
                     case 2: {
-                        /** 1.2 È¸¿ø Å»Åð **/
+                        /** 1.2 È¸ï¿½ï¿½ Å»ï¿½ï¿½ **/
                         withdraw_ui->select_withdraw();
                         break;
                     }
@@ -96,12 +105,12 @@ void doTask() {
             case 2: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 2.1 ·Î±×ÀÎ **/
+                        /** 2.1 ï¿½Î±ï¿½ï¿½ï¿½ **/
                         login_ui->select_login();
                         break;
                     }
                     case 2: {
-                        /** 2.2 ·Î±×¾Æ¿ô **/
+                        /** 2.2 ï¿½Î±×¾Æ¿ï¿½ **/
                         logout_ui->select_logout();
                         break;
                     }
@@ -111,12 +120,12 @@ void doTask() {
             case 3: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 3.1 Ã¤¿ë Á¤º¸ µî·Ï **/
+                        /** 3.1 Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ **/
                         EmploymentWrite_ui->select_register();
                         break;
                     }
                     case 2: {
-                        /** 3.2 µî·ÏµÈ Ã¤¿ë Á¤º¸ Á¶È¸ **/
+                        /** 3.2 ï¿½ï¿½Ïµï¿½ Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ **/
                         Employmentinfo_ui->Employment_View();
                         break;
                     }
@@ -126,20 +135,20 @@ void doTask() {
             case 4: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 4.1 Ã¤¿ë Á¤º¸ °Ë»ö **/
+                        /** 4.1 Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ë»ï¿½ **/
                         EmploymentInquiryAndApply_ui->Employment_View();
                         break;
                     }
                     case 2: {
-                        /** 4.2 Ã¤¿ë Áö¿ø **/
+                        /** 4.2 Ã¤ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ **/
                         break;
                     }
                     case 3: {
-                        /** 4.3 Áö¿ø Á¤º¸ Á¶È¸ **/
+                        /** 4.3 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¸ **/
                         break;
                     }
                     case 4: {
-                        /** 4.4 Áö¿ø Ãë¼Ò **/
+                        /** 4.4 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ **/
                         break;
                     }
                 }
@@ -148,7 +157,7 @@ void doTask() {
             case 5: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 5.1 Áö¿ø Á¤º¸ Åë°è **/
+                        /** 5.1 ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ **/
                         break;
                     }
                 }
@@ -157,22 +166,22 @@ void doTask() {
             case 6: {
                 switch (menu_level_2) {
                     case 1: {
-                        /** 6.1 Á¾·á **/
-                        // ÅØ½ºÆ® ÆÄÀÏ Ãâ·Â ¹®±¸
-                        fprintf(out_fp, "6.1. Á¾·á\n");
+                        /** 6.1 ï¿½ï¿½ï¿½ï¿½ **/
+                        // ï¿½Ø½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                        fprintf(out_fp, "6.1. ï¿½ï¿½ï¿½ï¿½\n");
 
-                        // µ¿Àû ÇÒ´ç Á¤¸®
+                        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ò´ï¿½ ï¿½ï¿½ï¿½ï¿½
                         delete register_ui;
                         delete register_control;
                         delete withdraw_ui;
                         delete withdraw_control;
                         delete member_collection;
 
-                        // ÆÄÀÏ Æ÷ÀÎÅÍ ´Ý±â
+                        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ý±ï¿½
                         fclose(in_fp);
                         fclose(out_fp);
 
-                        // Á¾·á ÇÃ·¡±× È°¼ºÈ­
+                        // ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½ï¿½ È°ï¿½ï¿½È­
                         is_program_exit = 1;
                         break;
                     }
