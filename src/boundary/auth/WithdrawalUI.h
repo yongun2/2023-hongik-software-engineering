@@ -9,9 +9,9 @@
 #include "../../controll/auth/Withdraw.h"
 
 /**
- * @var output_file_pointer : output.txt에 출력하기 위한 파일 포인터
- * @var logout_control : 로그아웃 로직을 수행하는 컨트롤
- * WithdrawalUI 객체 생성시에 주입을 받아야 합니다.
+ * WriterName: 계용운
+ * Description: 회원탈퇴 바운더리 클래스
+ * WriteTime: 2023 05 26 03:00
  */
 class WithdrawalUI {
 private:

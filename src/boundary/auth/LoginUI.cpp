@@ -1,24 +1,36 @@
 //
-// Created by °è¿ë¿î on 2023/05/21.
+// Created by ï¿½ï¿½ï¿½ï¿½ on 2023/05/21.
 //
 
 #include "LoginUI.h"
 
+/**
+ * WriterName: ê³„ìš©ìš´
+ * Description: ë¡œê·¸ì¸ ë°”ìš´ë”ë¦¬ ìƒì„±ìž
+ * WriteTime: 2023 05 26 03:00
+ * @arg: FILE *inputFilePointer ì½ê¸°ìš© íŒŒì¼ í¬ì¸í„°
+ * @arg: FILE *outputFilePointer ì“°ê¸°ìš© íŒŒì¼ í¬ì¸í„°
+ * @arg: Login *loginControl ë¡œê·¸ì¸ ì»¨íŠ¸ë¡¤
+ */
 LoginUI::LoginUI(FILE *inputFilePointer, FILE *outputFilePointer, Login *loginControl) : input_file_pointer(
         inputFilePointer), output_file_pointer(outputFilePointer), login_control(loginControl) {}
 
-
+/**
+ * WriterName: ê³„ìš©ìš´
+ * Description: ë¡œê·¸ì¸ ê´€ë ¨ ë°”ìš´ë”ë¦¬
+ * WriteTime: 2023 05 26 03:00
+ */
 void LoginUI::select_login() {
 
     char id[MAX_STRING], password[MAX_STRING];
 
-    /** ÇöÀç »óÅÂ Ãâ·Â **/
-    fprintf(output_file_pointer, "2.1. ·Î±×ÀÎ\n");
-    /** ·Î±×ÀÎ **/
+    /** ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ **/
+    fprintf(output_file_pointer, "2.1. ï¿½Î±ï¿½ï¿½ï¿½\n");
+    /** ï¿½Î±ï¿½ï¿½ï¿½ **/
     fscanf(input_file_pointer, "%s %s", id, password);
-    /** ÄÁÆ®·Ñ È£Ãâ **/
+    /** ï¿½ï¿½Æ®ï¿½ï¿½ È£ï¿½ï¿½ **/
     string login_member = login_control->login(id, password);
-    /** ¾ÆÀÌµð ºñ¹Ð¹øÈ£ Ãâ·Â **/
+    /** ï¿½ï¿½ï¿½Ìµï¿½ ï¿½ï¿½Ð¹ï¿½È£ ï¿½ï¿½ï¿½ **/
     fprintf(output_file_pointer, "> %s\n", login_member.c_str());
 
 }

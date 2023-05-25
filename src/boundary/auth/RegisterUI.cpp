@@ -1,13 +1,27 @@
 //
-// Created by °è¿ë¿î on 2023/05/20.
+// Created by ï¿½ï¿½ï¿½ï¿½ on 2023/05/20.
 //
 
 #include "RegisterUI.h"
 
+
+/**
+ * WriterName: ê³„ìš©ìš´
+ * Description: íšŒì›ê°€ì… ë°”ìš´ë”ë¦¬ ìƒì„±ì
+ * WriteTime: 2023 05 26 03:00
+ * @arg: FILE *inputFilePointer ì½ê¸°ìš© íŒŒì¼ í¬ì¸í„°
+ * @arg: FILE *outputFilePointer ì“°ê¸°ìš© íŒŒì¼ í¬ì¸í„°
+ * @arg: Register *registerControl íšŒì›ê°€ì… ì»¨íŠ¸ë¡¤
+ */
 RegisterUI::RegisterUI(FILE *inputFilePointer, FILE *outputFilePointer, Register *registerControl) : input_file_pointer(
         inputFilePointer), output_file_pointer(outputFilePointer), register_control(registerControl) {}
 
 
+/**
+* WriterName: ê³„ìš©ìš´
+* Description: íšŒì›ê°€ì… ë°”ìš´ë”ë¦¬
+* WriteTime: 2023 05 26 03:00
+*/
 void RegisterUI::select_register() {
     int user_type;
 
@@ -18,13 +32,13 @@ void RegisterUI::select_register() {
 
     fscanf(input_file_pointer, "%d", &user_type);
 
-    fprintf(output_file_pointer, "1.1. È¸¿ø°¡ÀÔ\n");
+    fprintf(output_file_pointer, "1.1. È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½\n");
     switch (user_type) {
         case 1: {
-            /** È¸»ç È¸¿ø È¸¿ø°¡ÀÔ **/
+            /** È¸ï¿½ï¿½ È¸ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ **/
             fscanf(input_file_pointer, "%s %s %s %s", company_name, ssn, id, password);
 
-            /** È¸»ç È¸¿ø È¸¿ø°¡ÀÔ ·ÎÁ÷ È£Ãâ **/
+            /** È¸ï¿½ï¿½ È¸ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ **/
             Member *new_member = new CompanyMember(id, password, COMPANY,company_name, ssn);
             new_member_detail = register_control->register_member(new_member);
 
@@ -32,10 +46,10 @@ void RegisterUI::select_register() {
             break;
         }
         case 2: {
-            /** ÀÏ¹İ È¸¿ø È¸¿ø°¡ÀÔ **/
+            /** ï¿½Ï¹ï¿½ È¸ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ **/
             fscanf(input_file_pointer, "%s %s %s %s", name, registration_number, id, password);
 
-            /** ÀÏ¹İ È¸¿ø È¸¿ø°¡ÀÔ ·ÎÁ÷ È£Ãâ **/
+            /** ï¿½Ï¹ï¿½ È¸ï¿½ï¿½ È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ È£ï¿½ï¿½ **/
             Member *new_member = new GeneralMember(id, password, GENERAL, name, registration_number);
             new_member_detail = register_control->register_member(new_member);
             fprintf(output_file_pointer, "> 1 %s\n", new_member_detail.c_str());
