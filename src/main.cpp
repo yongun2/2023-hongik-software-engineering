@@ -1,4 +1,4 @@
-
+﻿
 #include <vector>
 #include "boundary/auth/RegisterUI.h"
 #include "controll/auth/Withdraw.h"
@@ -20,8 +20,8 @@ using std::vector;
 void doTask();
 
 /** ������ ��η� ���� �ϸ� �˴ϴ�.**/
-#define INPUT_FILE_NAME "/Users/ko/Desktop/src/input.txt"
-#define OUTPUT_FILE_NAME "/Users/ko/Desktop/src/output.txt"
+#define INPUT_FILE_NAME "/Users/kiwis/Desktop/softwareengineering/input.txt"
+#define OUTPUT_FILE_NAME "/Users/kiwis/Desktop/softwareengineering/output.txt"
 
 /**
  * WriterName: 계용운
@@ -46,25 +46,25 @@ void doTask() {
     /**
      * ���� ����� ����
      */
-    FILE *in_fp = fopen(INPUT_FILE_NAME, "r");
-    FILE *out_fp = fopen(OUTPUT_FILE_NAME, "w");
+    FILE* in_fp = fopen(INPUT_FILE_NAME, "r");
+    FILE* out_fp = fopen(OUTPUT_FILE_NAME, "w");
 
     /**
      * �α��� / ȸ������ / �α׾ƿ� / Ż��
      */
-    //entity
+     //entity
 
-    MemberCollection *member_collection = new MemberCollection();
+    MemberCollection* member_collection = new MemberCollection();
     // control
-    Register *register_control = new Register(member_collection);
-    Login *login_control = new Login(member_collection);
-    Logout *logout_control = new Logout(member_collection);
-    Withdraw *withdraw_control = new Withdraw(member_collection);
+    Register* register_control = new Register(member_collection);
+    Login* login_control = new Login(member_collection);
+    Logout* logout_control = new Logout(member_collection);
+    Withdraw* withdraw_control = new Withdraw(member_collection);
     // boundary
-    RegisterUI *register_ui = new RegisterUI(in_fp, out_fp, register_control);
-    LoginUI *login_ui = new LoginUI(in_fp,out_fp, login_control);
-    LogoutUI *logout_ui = new LogoutUI(out_fp, logout_control);
-    WithdrawalUI *withdraw_ui = new WithdrawalUI(out_fp, withdraw_control);
+    RegisterUI* register_ui = new RegisterUI(in_fp, out_fp, register_control);
+    LoginUI* login_ui = new LoginUI(in_fp, out_fp, login_control);
+    LogoutUI* logout_ui = new LogoutUI(out_fp, logout_control);
+    WithdrawalUI* withdraw_ui = new WithdrawalUI(out_fp, withdraw_control);
 
 
     EmploymentCollection* Employment_collection = new EmploymentCollection();
@@ -73,7 +73,7 @@ void doTask() {
     EmploymentWrite* Employmentwrite = new  EmploymentWrite(Employment_collection);
     EmploymentInquiryAndApply* EmploymentInquiryAndapply = new  EmploymentInquiryAndApply(Employment_collection);
     // boundary
-    EmploymentWriteUI* EmploymentWrite_ui = new EmploymentWriteUI(member_collection,in_fp, out_fp, Employmentwrite);
+    EmploymentWriteUI* EmploymentWrite_ui = new EmploymentWriteUI(member_collection, in_fp, out_fp, Employmentwrite);
     EmploymentinfoUI* Employmentinfo_ui = new EmploymentinfoUI(out_fp, EmploymentInfo);
     EmploymentInquiryAndApplyUI* EmploymentInquiryAndApply_ui = new EmploymentInquiryAndApplyUI(in_fp, out_fp, EmploymentInquiryAndapply);
 
@@ -87,107 +87,96 @@ void doTask() {
 
         // �޴� ���� �� �ش� ���� ����
         switch (menu_level_1) {
+        case 1: {
+            switch (menu_level_2) {
             case 1: {
-                switch (menu_level_2) {
-                    case 1: {
-                        /** 1.1 ȸ�� ���� **/
-                        register_ui->select_register();
-                        break;
-                    }
-                    case 2: {
-                        /** 1.2 ȸ�� Ż�� **/
-                        withdraw_ui->select_withdraw();
-                        break;
-                    }
-                }
+                /** 1.1 ȸ�� ���� **/
+                register_ui->select_register();
                 break;
             }
             case 2: {
-                switch (menu_level_2) {
-                    case 1: {
-                        /** 2.1 �α��� **/
-                        login_ui->select_login();
-                        break;
-                    }
-                    case 2: {
-                        /** 2.2 �α׾ƿ� **/
-                        logout_ui->select_logout();
-                        break;
-                    }
-                }
+                /** 1.2 ȸ�� Ż�� **/
+                withdraw_ui->select_withdraw();
+                break;
+            }
+            }
+            break;
+        }
+        case 2: {
+            switch (menu_level_2) {
+            case 1: {
+                /** 2.1 �α��� **/
+                login_ui->select_login();
+                break;
+            }
+            case 2: {
+                /** 2.2 �α׾ƿ� **/
+                logout_ui->select_logout();
+                break;
+            }
+            }
+            break;
+        }
+        case 3: {
+            switch (menu_level_2) {
+            case 1: {
+                /** 3.1 ä�� ���� ��� **/
+                EmploymentWrite_ui->select_register();
+                break;
+            }
+            case 2: {
+                /** 3.2 ��ϵ� ä�� ���� ��ȸ **/
+                Employmentinfo_ui->Employment_View();
+                break;
+            }
+            }
+            break;
+        }
+        case 4: {
+            switch (menu_level_2) {
+            case 1: {
+                /** 4.1 ä�� ���� �˻� **/
+                EmploymentInquiryAndApply_ui->Employment_View();
+                break;
+            }
+            case 2: {
+                /** 4.2 ä�� ���� **/
+                EmploymentInquiryAndApply_ui->Apply();
                 break;
             }
             case 3: {
-                switch (menu_level_2) {
-                    case 1: {
-                        /** 3.1 ä�� ���� ��� **/
-                        EmploymentWrite_ui->select_register();
-                        break;
-                    }
-                    case 2: {
-                        /** 3.2 ��ϵ� ä�� ���� ��ȸ **/
-                        Employmentinfo_ui->Employment_View();
-                        break;
-                    }
-                }
+                /** 4.3 ���� ���� ��ȸ **/
+                EmploymentInquiryAndApply_ui->Apply_View();
                 break;
             }
-            case 4: {
-                switch (menu_level_2) {
-                    case 1: {
-                        /** 4.1 ä�� ���� �˻� **/
-                        EmploymentInquiryAndApply_ui->Employment_View();
-                        break;
-                    }
-                    case 2: {
-                        /** 4.2 ä�� ���� **/
-                        break;
-                    }
-                    case 3: {
-                        /** 4.3 ���� ���� ��ȸ **/
-                        break;
-                    }
-                    case 4: {
-                        /** 4.4 ���� ��� **/
-                        break;
-                    }
-                }
-                break;
+                  break;
             }
-            case 5: {
-                switch (menu_level_2) {
-                    case 1: {
-                        /** 5.1 ���� ���� ��� **/
-                        break;
-                    }
-                }
-                break;
-            }
-            case 6: {
-                switch (menu_level_2) {
-                    case 1: {
-                        /** 6.1 ���� **/
-                        // �ؽ�Ʈ ���� ��� ����
-                        fprintf(out_fp, "6.1. ����\n");
+        case 6: {
+            switch (menu_level_2) {
+            case 1: {
+                /** 6.1 ���� **/
+                // �ؽ�Ʈ ���� ��� ����
+                fprintf(out_fp, "6.1. 종료\n");
 
-                        // ���� �Ҵ� ����
-                        delete register_ui;
-                        delete register_control;
-                        delete withdraw_ui;
-                        delete withdraw_control;
-                        delete member_collection;
+                // ���� �Ҵ� ����
+                delete register_ui;
+                delete register_control;
+                delete withdraw_ui;
+                delete withdraw_control;
+                delete member_collection;
 
-                        // ���� ������ �ݱ�
-                        fclose(in_fp);
-                        fclose(out_fp);
+                // ���� ������ �ݱ�
+                fclose(in_fp);
+                fclose(out_fp);
 
-                        // ���� �÷��� Ȱ��ȭ
-                        is_program_exit = 1;
-                        break;
-                    }
-                }
+                // ���� �÷��� Ȱ��ȭ
+                is_program_exit = 1;
                 break;
             }
+            }
+            break;
+        }
+        }
         }
     }
 }
